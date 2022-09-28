@@ -18,7 +18,7 @@
 
 ### The challenge
 
-Build a Gameified Progression tracker full stack Application using theMERN
+Build a Gameified Progression tracker full stack Application using the MERN stack
 
 ### Screenshot
 
@@ -44,10 +44,12 @@ Build a Gameified Progression tracker full stack Application using theMERN
 
 ### Built with
 
-- Semantic HTML5 markup
-- CSS custom properties
-- Flexbox
-- CSS Grid
+- HTML
+- CSS
+- MongoDB
+- Express
+- React
+- Node
 - Javascript
 
 ### What I learned
