@@ -1,9 +1,14 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   return (
-    <div>
-      <h1>Level Up</h1>
-    </div>
+    <header>
+      <div className='navbar'>
+        <Link to='/'>
+          <h1>Level Up</h1>
+        </Link>
+      </div>
+    </header>
   );
 }

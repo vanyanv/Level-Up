@@ -1,9 +1,32 @@
 import React from 'react';
+import { useEffect, useState } from 'react';
+
+//comps
+import ProjectDetails from './ProjectDetails';
 
 export default function Home() {
+  const [workout, setWorkouts] = useState(null);
+
+  useEffect(() => {
+    const fetchWorkouts = async () => {
+      const response = await fetch('/api/workouts');
+      const json = await response.json();
+
+      if (response.ok) {
+        setWorkouts(json);
+      }
+    };
+    fetchWorkouts();
+  }, []);
+
   return (
     <div className='home'>
-      <h1>Hello</h1>
+      <div>
+        {workout &&
+          workout.map((workout) => (
+            <ProjectDetails key={workout._id} workout={workout} />
+          ))}
+      </div>
     </div>
   );
 }

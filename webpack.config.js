@@ -20,9 +20,8 @@ module.exports = {
   ],
   devServer: {
     proxy: {
-      api: 'http://localhost:3000',
+      '/api': 'http://localhost:3000',
     },
-    port: 8080,
   },
   module: {
     rules: [
@@ -39,8 +38,8 @@ module.exports = {
       },
       {
         //creates style tag, loads css files, converts sass files
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        test: /\.css$/i,
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
