@@ -1,16 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+//comps
+import Home from './Home';
 import Navbar from './Navbar';
 import Login from './Login';
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        <Navbar />
-        <Login />
-      </div>
-    );
-  }
+function App() {
+  return (
+    <div className='App'>
+      <BrowserRouter>
+        <div className='pages'>
+          <Routes>
+            <Route path='/' element={<Home />}></Route>
+          </Routes>
+        </div>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
