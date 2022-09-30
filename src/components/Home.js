@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 //comps
 import ProjectDetails from './ProjectDetails';
-
+import AddProjectForm from './AddProjectForm';
 export default function Home() {
   const [workout, setWorkouts] = useState(null);
 
@@ -27,6 +27,7 @@ export default function Home() {
             <ProjectDetails key={workout._id} workout={workout} />
           ))}
       </div>
+      <AddProjectForm />
     </div>
   );
 }
